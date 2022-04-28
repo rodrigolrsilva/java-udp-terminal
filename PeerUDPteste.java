@@ -7,6 +7,9 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.util.Scanner;
+//A ideia inicial era implementar cliente e servidor nessa mesma classe, o que me parece precisar 
+//ser feito com a classe DatagramChannel em vez de DatagramSocket já que aí é possível utilizar UDP
+//de forma não-bloqueante, mas não funcionou, logo recorri a cliente/servidor.
 public class PeerUDPteste {
     private DatagramSocket udpSocket;
     private InetAddress serverAddress1, serverAddress2;//implementacao de SocketAddress
